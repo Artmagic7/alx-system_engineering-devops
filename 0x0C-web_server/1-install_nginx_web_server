@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Install and configure Nginx on an Ubuntu web server
+
+apt-get update
+apt-get -y install nginx
+
+# Configure Nginx to listen on port 80
+sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+
+# Restart Nginx
+service nginx restart
+
+# Create a simple HTML file
+echo "Hello World!" > /var/www/html/index.html
