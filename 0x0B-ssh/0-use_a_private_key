@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script links to the server using the private key ~/.ssh/school with the user ubuntu.
+# This script links to the server using the private key ~/.ssh/id_rsa with the user ubuntu.
 
-ssh -i ~/.ssh/school ubuntu@52.91.147.42
+ssh -i ~/.ssh/id_rsa ubuntu@54.172.91.53

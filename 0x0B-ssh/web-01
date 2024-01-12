@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Login for server-01
+
+
+eval $("ssh-agent")
+
+ssh-add ~/.ssh/school
+
+
+ssh ubuntu@3.94.211.151
