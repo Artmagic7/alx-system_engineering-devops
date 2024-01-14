@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Fixing Nginx to listen on port 80 in 5 lines or less
+
+# Install Nginx and stop the service
+apt-get update && apt-get install -y nginx && service nginx stop
+
+# Configure Nginx to listen on port 80
+sed -i 's/80 default_server/80 default_server;/g' /etc/nginx/sites-available/default
+service nginx restart
